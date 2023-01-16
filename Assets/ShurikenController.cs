@@ -12,7 +12,7 @@ public class ShurikenController : MonoBehaviour
 
     private float raycastDistance = 0.02f;
 
-    public int currentDamage = 10;
+    public int currentDamage = 4;
 
     public GameManager gameManager;
 
@@ -40,11 +40,11 @@ public class ShurikenController : MonoBehaviour
             {
 
                 enemyController.currentLife -= currentDamage;
-                Debug.Log("Proiettile colpito");
+                
                 //this.gameObject.SetActive(false);
                 if (enemyController.currentLife<=0)
                 {
-                    Debug.Log("Rimuovo nemico");
+                   
                     gameManager.removeEnemy(enemyController.enemyIndex);
                    
                 }

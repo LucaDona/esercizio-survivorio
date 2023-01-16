@@ -25,13 +25,13 @@ public class GameManager : MonoBehaviour
 
     private List<ShurikenController> inactiveShurikens;
 
-    private int spawnedEnemyLimit=10;
+    private int spawnedEnemyLimit=20;
 
-    private float maxEnemySpawnTime = 2f;
+    private float maxEnemySpawnTime = 1.5f;
 
     private float currentEnemySpawnTime;
 
-    private float maxShurikenSpawnTime = 2f;
+    private float maxShurikenSpawnTime = 0.4f;
 
     private float currentShurikenSpawnTime;
 
@@ -67,7 +67,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         currentShurikenSpawnTime -= Time.deltaTime;
-
 
         currentEnemySpawnTime -= Time.deltaTime;
 

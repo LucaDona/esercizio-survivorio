@@ -131,5 +131,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   enemyController: {fileID: 0}
-  currentDamage: 10
+  currentDamage: 4
   gameManager: {fileID: 0}
