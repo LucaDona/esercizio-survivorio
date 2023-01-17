@@ -10,7 +10,7 @@ public class LoseMenu : MonoBehaviour
 
     public void restart()
     {
-        gameManager.reloadScene();
+        gameManager.ReloadScene();
     }
 
     // Update is called once per frame

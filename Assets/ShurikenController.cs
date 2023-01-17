@@ -8,14 +8,13 @@ public class ShurikenController : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    public EnemyController enemyController; 
+    public EnemyController enemyController;
 
     private float raycastDistance = 0.02f;
 
     public int currentDamage = 4;
 
     public GameManager gameManager;
-
 
     void Update()
     {
@@ -41,16 +40,14 @@ public class ShurikenController : MonoBehaviour
 
                 enemyController.currentLife -= currentDamage;
                 
-                //this.gameObject.SetActive(false);
                 if (enemyController.currentLife<=0)
                 {
                    
-                    gameManager.removeEnemy(enemyController.enemyIndex);
+                    gameManager.RemoveEnemy(enemyController.enemyIndex);
                    
                 }
 
-                //Destroy(this.gameObject);
-                gameManager.removeShuriken();
+                gameManager.RemoveShuriken();
 
             }
 

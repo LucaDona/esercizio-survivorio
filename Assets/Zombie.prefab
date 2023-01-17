@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1318142424534606049}
   - component: {fileID: 1318142424534606048}
   - component: {fileID: 3840309055461312217}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -87,9 +87,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1318142424534606049}
     m_Modifications:
+    - target: {fileID: 1005471253448896, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101106054577674, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204980353444846, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274376208679538, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1413550271876776, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
       propertyPath: m_Name
       value: Chara_14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413550271876776, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560842517373040, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625817645088832, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752551287253596, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775729221466330, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821949871319178, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875353414947678, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1905116673537110, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4530432444723096, guid: d43f38fc1456e574589ba6f37f268767, type: 3}
       propertyPath: m_RootOrder

@@ -220,9 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8946aff4c21be946a44ad7f79e75574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shurikenController: {fileID: 1114561179321663713, guid: a53f23230d9b280439b2168a7c09dbc1, type: 3}
-  playerController: {fileID: 530822691}
-  enemyController: {fileID: 3840309055461312217, guid: d424b4c9cff984249a9ee32ade7401cc, type: 3}
+  _shurikenController: {fileID: 1114561179321663713, guid: a53f23230d9b280439b2168a7c09dbc1, type: 3}
+  _playerController: {fileID: 530822691}
+  _enemyController: {fileID: 3840309055461312217, guid: d424b4c9cff984249a9ee32ade7401cc, type: 3}
   loseMenu: {fileID: 1185868292}
 --- !u!4 &18969945
 Transform:
@@ -476,6 +476,14 @@ PrefabInstance:
       propertyPath: speed
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 8365746296050832092, guid: 517047a19909cb547aed6d69c203d193, type: 3}
+      propertyPath: _speed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365746296050832092, guid: 517047a19909cb547aed6d69c203d193, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 18969944}
     - target: {fileID: 8365746296050832092, guid: 517047a19909cb547aed6d69c203d193, type: 3}
       propertyPath: gameManager
       value: 

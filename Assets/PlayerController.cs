@@ -4,32 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private float directionX=0;
+    private float _directionX;
 
-    private float directionY = 0;
-
-    [SerializeField]
-    private Rigidbody2D rigidbody;
+    private float _directionY;
 
     [SerializeField]
-    private GameObject spriteObject;
+    private Rigidbody2D _rigidbody;
 
     [SerializeField]
-    private float speed;
+    private GameObject _spriteObject;
 
-    private float normalizeConstant = 0.707106781f;
+    [SerializeField]
+    private float _speed;
 
-    public GameManager gameManager;
+    private float _normalizeConstant = 0.707106781f;
 
-    
-    
-    void Start()
-    {
-        
-    }
+    public GameManager GameManager;
 
-
+   
     void Update()
     {
         bool left=Input.GetKey(KeyCode.A);
@@ -42,19 +34,19 @@ public class PlayerController : MonoBehaviour
         {
             if(left && right)
             {
-                directionX = 0;
+                _directionX = 0;
             }else if (left)
             {
-                directionX = -1;
+                _directionX = -1;
             }
             else
             {
-                directionX = 1;
+                _directionX = 1;
             }
         }
         else
         {
-            directionX = 0;
+            _directionX = 0;
         }
 
 
@@ -63,57 +55,45 @@ public class PlayerController : MonoBehaviour
         {
             if(up && down)
             {
-                directionY = 0;
+                _directionY = 0;
             }else if (up)
             {
-                directionY = 1;
+                _directionY = 1;
             }
             else
             {
-                directionY = -1;
+                _directionY = -1;
             }
         }
         else
         {
-            directionY = 0;
+            _directionY = 0;
         }
 
-        if (spriteObject.transform.localScale.x > 0 && directionX>0)
+        if ((_spriteObject.transform.localScale.x > 0 && _directionX>0) || (_spriteObject.transform.localScale.x < 0 && _directionX < 0))
         {
-            spriteObject.transform.localScale = new Vector3(spriteObject.transform.localScale.x*-1, spriteObject.transform.localScale.y, spriteObject.transform.localScale.z);
-        }else if(spriteObject.transform.localScale.x <0 && directionX < 0)
-        {
-            spriteObject.transform.localScale = new Vector3(spriteObject.transform.localScale.x * -1, spriteObject.transform.localScale.y, spriteObject.transform.localScale.z);
-        }
-
-      
-        if (Mathf.Abs(directionX)>0.5f && Mathf.Abs(directionY) > 0.5f)
-        {
-            
-            directionX *= normalizeConstant;
-            directionY *= normalizeConstant;
-
+            _spriteObject.transform.localScale = new Vector3(_spriteObject.transform.localScale.x*-1, _spriteObject.transform.localScale.y, _spriteObject.transform.localScale.z);
         }
 
     }
 
     private void FixedUpdate()
     {
+        if (Mathf.Abs(_directionX) > 0.5f && Mathf.Abs(_directionY) > 0.5f)
+        {
+            _directionX *= _normalizeConstant;
+            _directionY *= _normalizeConstant;
+        }
 
-        
-        rigidbody.velocity = new Vector2(directionX, directionY) * speed * Time.fixedDeltaTime;
-
+        _rigidbody.velocity = new Vector2(_directionX, _directionY) * _speed * Time.fixedDeltaTime;
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-           
-            gameManager.showLoseCanvas();
-
-
+            GameManager.ShowLoseCanvas();
         }
     }
 }

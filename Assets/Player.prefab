@@ -95,9 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ace9e49115e3b4aa516c13989e3b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 8705143371933504608}
-  spriteObject: {fileID: 7995783564657506876}
-  speed: 150
+  _rigidbody: {fileID: 8705143371933504608}
+  _spriteObject: {fileID: 7995783564657506876}
+  _speed: 200
   gameManager: {fileID: 0}
 --- !u!1 &8705143372203823385
 GameObject:
